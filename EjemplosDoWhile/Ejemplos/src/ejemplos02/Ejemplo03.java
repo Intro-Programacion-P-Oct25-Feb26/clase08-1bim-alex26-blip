@@ -2,7 +2,7 @@
  Agregar lo correspondiente para que el proceso siguiente permita
  sumar las notas en cada iteración y presentar en la cadena final el
  valor de la suma.
- */// para la solucion usar switch
+ */
 package ejemplos02;
 
 import java.util.Locale;
@@ -22,33 +22,25 @@ public class Ejemplo03 {
         boolean bandera = true;
         int salida;
         double sumaNotas = 0;
-
+        
         do {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
             sumaNotas = sumaNotas + nota;
-            cadenaFinal = String.format("%s%.2f\n", cadenaFinal,
+            cadenaFinal = String.format("%s%.2f\n", cadenaFinal, 
                     nota);
-
+            
             System.out.println("Ingrese (-111) si desea salir del ciclo ");
             salida = entrada.nextInt();
-            switch (salida) {
-                case "s";
-                case "si";
-                case "";
-                case "s";
-                    bandera = false;
-                    break;
 
-                    if (salida == -111) {
-                        bandera = false;
-                    }
-
+            if (salida == -111) {
+                bandera = false;
             }
-            while (bandera); // (bandera==true)
 
-            cadenaFinal = String.format("%s\n", cadenaFinal);
-            cadenaFinal = String.format("%s\nLa suma es%.2f", cadenaFinal, sumaNotas);
-            System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
-        }
+        } while (bandera); // (bandera==true)
+        
+        cadenaFinal = String.format("%s\n", cadenaFinal);
+        cadenaFinal = String.format("%s\nLa suma es%.2f", cadenaFinal, sumaNotas);
+        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
     }
+}
