@@ -35,6 +35,7 @@ public class Ejemplo03 {
 
             if (salida == -111) {
                 bandera = false;
+                // esta bien el codigo 
             }
 
         } while (bandera); // (bandera==true)
