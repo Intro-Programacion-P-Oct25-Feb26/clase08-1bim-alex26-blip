@@ -24,13 +24,19 @@ package ejemplos02;
 public class Ejemplo01 {
 
     public static void main(String[] args) {
+        String mensaje = "";
         int contador = 1;
         int suma = 0;
         do {
         
+             suma =suma + contador;
+           mensaje = String.format("%s%s\n", mensaje , contador );
             contador = contador + 1;
-        } while (contador <= 10); 
-        System.out.printf("%d\n", suma);
+
+        } while (contador <= 10);
+        mensaje = String.format("%sla suma de la operacion es %s\n", mensaje ,suma );
+        
+        System.out.printf("%s", mensaje);
     }
 
 }
