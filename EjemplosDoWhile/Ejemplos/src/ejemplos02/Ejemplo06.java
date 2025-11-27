@@ -38,7 +38,7 @@ public class Ejemplo06 {
         
         System.out.println("Ingrese la tabla a generar");
         tabla = entrada.nextInt(); // 2
-        System.out.println("Ingrese la tabla a generar");
+        System.out.println("Ingrese la tabla a generar"); 
         limite = entrada.nextInt();
         if (tabla % 2 !=0 || limite % 2 !=0){
         tabla=10;
